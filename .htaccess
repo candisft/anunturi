@@ -1,0 +1,12 @@
+RewriteEngine on
+
+RewriteRule all-(.*)-([0-9]+)\.html$ all.php?id=$1&page=$2 [L]
+RewriteRule featured-(.*)-([0-9]+)\.html$ featured.php?id=$1&page=$2 [L]
+RewriteRule my_ads-(.*)-([0-9]+)\.html$ my_ads.php?id=$1&page=$2 [L]
+RewriteRule favorites-(.*)-([0-9]+)\.html$ favorites.php?id=$1&page=$2 [L]
+RewriteRule edit_ad-([0-9]+)\.html$ edit_ad.php?&id=$1 [L]
+RewriteRule ad-([0-9]+)-(.*)\.html$ ad.php?id=$1&name=$2 [L]
+RewriteRule cat-(.*)-([0-9]+)-(.*)-([0-9]+)\.html$ cat.php?id=$1&cid=$2&name=$3&page=$4 [L]
+RewriteRule sub-(.*)-([0-9]+)-(.*)-([0-9]+)\.html$ sub.php?id=$1&cid=$2&name=$3&page=$4 [L]
+RewriteRule ^(.*)\.html$ $1.php [L]
+
